@@ -10,6 +10,7 @@ public class TextTestPageObject extends Helper{
 	WebDriver driver;
 
 	public TextTestPageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -30,6 +31,7 @@ public class TextTestPageObject extends Helper{
 		FullName.sendKeys("Manohar");
 		emailField.sendKeys("manoharkantjoshi@gmail.com");
 		textArea.sendKeys("Kunigad");
+		scrollDown(0, 400);
 		submitButton.click();
 	}
 }
